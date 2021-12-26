@@ -58,20 +58,29 @@ table {
   height: 100vh;
 }
 ul.countdown {
+  width: 100%;
   list-style: none;
   padding: 0;
   display: block;
   text-align: center;
   margin-bottom: 0;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 ul.countdown li {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.3);
-  width: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 5px;
   border: 1px solid white;
   padding: 8px;
   margin: 0px 8px 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 ul.countdown li span {
   font-size: 2rem;
@@ -88,6 +97,11 @@ ul.countdown li p {
   color: white;
   font-size: 1rem;
   margin-bottom: 0px;
+}
+.col-3 {flex: 0 0 10%}
+
+@media (max-width: 600px) {
+  .col-3 {flex: 0 0 40%}
 }
 
 body{
